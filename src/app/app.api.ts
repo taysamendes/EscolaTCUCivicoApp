@@ -1,0 +1,1 @@
+export const ESCOLA_API = 'http://localhost:3000/escolas'
