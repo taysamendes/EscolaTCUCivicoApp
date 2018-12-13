@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ESCOLA_API } from 'src/app/app.api';
+import { Escola } from './escola.model';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 
 @Injectable()
 export class EscolasService {
-
+  private url = 'http://mobile-aceite.tcu.gov.br/nossaEscolaRS/rest/escolas/'
+  
   constructor(private http:HttpClient) { }
 
-  escolas(){
-    return this.http.get(`${ESCOLA_API}`)
+  escolas():Observable<Escola[]>{
+    return this.http.get<Escola[]>(this.url)
+      .pipe(map(response => response))
   }
 }

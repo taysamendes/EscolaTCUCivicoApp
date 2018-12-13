@@ -12,7 +12,8 @@ import {ROUTES} from './app.routes'
 import { RouterModule } from '@angular/router';
 import { EscolaComponent } from './escolas/escola/escola.component';
 import { EscolasService } from './escolas/escola/escolas.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AvaliacaoComponent } from './avaliacoes/avaliacao/avaliacao.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { HttpClient } from '@angular/common/http';
     HomeComponent,
     AboutComponent,
     EscolaComponent,
+    AvaliacaoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [EscolasService, HttpClient],
+  providers: [EscolasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

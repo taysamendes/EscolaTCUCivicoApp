@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Avaliacao } from './avaliacao/avaliacao.model';
+import { AvaliacaoService } from './avaliacao/avaliacao.service';
 
 @Component({
   selector: 'app-avaliacoes',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvaliacoesComponent implements OnInit {
 
-  constructor() { }
+  avaliacoes:Avaliacao[]
+
+  constructor(private avaliacaoService:AvaliacaoService) { }
 
   ngOnInit() {
+    this.avaliacaoService.avaliacoes()
+      .subscribe(avaliacoes => this.avaliacoes = avaliacoes)
   }
 
 }

@@ -1,3 +1,10 @@
-<p>
-  avaliacoes works!
-</p>
+<h2>Avaliações</h2>
+<hr>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let avaliacao of avaliacoes" class="col-sm-4" >
+     <app-avaliacao [avaliacao]="avaliacao"></app-avaliacao>
+    </div>
+  </div>
+</div>
+
