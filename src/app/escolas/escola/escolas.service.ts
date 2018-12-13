@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 
 
 
+
 @Injectable()
 export class EscolasService {
   private url = 'http://mobile-aceite.tcu.gov.br/nossaEscolaRS/rest/escolas/'
@@ -14,6 +15,11 @@ export class EscolasService {
 
   escolas():Observable<Escola[]>{
     return this.http.get<Escola[]>(this.url)
+      .pipe(map(response => response))
+  }
+
+  escolaById(id:string):Observable<Escola>{
+    return this.http.get<Escola>(`${this.url}/${id}`)
       .pipe(map(response => response))
   }
 }
