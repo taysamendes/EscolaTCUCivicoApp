@@ -1,15 +1,35 @@
-<h2>{{escola?.nome}}</h2>
+
 <div class="container">
   <div class="list-group">
+      <div class="card-header" style="background-color:#e0e0eb">
+          {{escola.nome}}
+        </div>
     <button type="button" class="list-group-item list-group-item-action">
-    <b>ID:</b> {{escola?.codEscola}}
+      <b>ID:</b> {{escola?.codEscola}}
     </button>
     <button type="button" class="list-group-item list-group-item-action"> <b>Rede: </b>{{escola?.rede}}</button>
-    <button type="button" class="list-group-item list-group-item-action"> <b>Endereço:</b> {{escola?.endereco.descricao}} - Bairro: {{escola?.endereco.bairro}}</button>
-    <button type="button" class="list-group-item list-group-item-action"> <b>E-mail:</b> {{escola?.email}}</button>
-    <button type="button" class="list-group-item list-group-item-action"> <b>Situaçao de funcionamento:</b>  {{escola?.situacaoFuncionamento}}</button>
-    <button type="button" class="list-group-item list-group-item-action"> <b>Esfera Administrativa:</b> {{escola?.esferaAdministrativa}}</button>
-
+    <button type="button" class="list-group-item list-group-item-action"> <b>Endereço:</b> {{escola?.endereco.descricao
+      | titlecase}} - <b>Bairro:</b> {{escola?.endereco.bairro | titlecase}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>E-mail:</b> {{escola?.email | lowercase}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Situaçao de funcionamento:</b>
+      {{escola?.situacaoFuncionamento}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Esfera Administrativa:</b>
+      {{escola?.esferaAdministrativa}}</button>
+  </div>
+</div>
+<hr>
+<h3>Avaliações</h3>
+<div class="avaliacao">
+  <div class="col-sm-4" *ngFor="let a of avaliacao">
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <div class="card-header" style="background-color:#e0e0eb">
+          Ano {{a.ano}}
+        </div>
+        <li class="list-group-item">Tipo: {{a.tipoAvaliacao.nome}}</li>
+        <li class="list-group-item">Média: {{a.valor}}</li>
+      </ul>
+    </div>
   </div>
 </div>
 

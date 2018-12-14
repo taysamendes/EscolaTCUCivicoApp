@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class EscolasService {
   private url = 'http://mobile-aceite.tcu.gov.br/nossaEscolaRS/rest/escolas'
+
   
   constructor(private http:HttpClient) { }
 
@@ -23,4 +24,9 @@ export class EscolasService {
       .pipe(map(resp => resp))
       
   }
+
+  avaliacaoDeEscola(id:string):Observable<any>{
+    return this.http.get<any>(`${this.url}/${id}/avaliacoes`)
+  }
+
 }

@@ -15,6 +15,7 @@ import { EscolasService } from './escolas/escola/escolas.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AvaliacaoComponent } from './avaliacoes/avaliacao/avaliacao.component';
 import { DetalheEscolaComponent } from './detalhe-escola/detalhe-escola.component';
+import { AvaliacaoEscolaComponent } from './detalhe-escola/avaliacao-escola/avaliacao-escola.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DetalheEscolaComponent } from './detalhe-escola/detalhe-escola.componen
     AboutComponent,
     EscolaComponent,
     AvaliacaoComponent,
-    DetalheEscolaComponent
+    DetalheEscolaComponent,
+    AvaliacaoEscolaComponent
   ],
   imports: [
     BrowserModule,
