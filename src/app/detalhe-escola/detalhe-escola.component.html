@@ -1,12 +1,15 @@
-<h2>Detalhes</h2>
+<h2>{{escola?.nome}}</h2>
 <div class="container">
   <div class="list-group">
     <button type="button" class="list-group-item list-group-item-action">
-    ID: {{escola.codEscola}}
+    <b>ID:</b> {{escola?.codEscola}}
     </button>
-    <button type="button" class="list-group-item list-group-item-action">Nome: {{escola.nome}}</button>
-    <button type="button" class="list-group-item list-group-item-action">Rede: {{escola.rede}}</button>
-    <button type="button" class="list-group-item list-group-item-action">Endereço: {{escola.endereco.descricao}}</button>
-    <button type="button" class="list-group-item list-group-item-action">E-mail:{{escola.email}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Rede: </b>{{escola?.rede}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Endereço:</b> {{escola?.endereco.descricao}} - Bairro: {{escola?.endereco.bairro}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>E-mail:</b> {{escola?.email}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Situaçao de funcionamento:</b>  {{escola?.situacaoFuncionamento}}</button>
+    <button type="button" class="list-group-item list-group-item-action"> <b>Esfera Administrativa:</b> {{escola?.esferaAdministrativa}}</button>
+
   </div>
 </div>
+

@@ -1,7 +1,10 @@
 .nav-item:hover{
     opacity: 2.0;
-    background-color: #ffffcc;
+    background-color: #c6ecd9;
     border-radius: 15px;
 
 }
 
+a{
+    color: aliceblue;
+}

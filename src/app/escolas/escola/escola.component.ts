@@ -8,7 +8,7 @@ import { Escola } from './escola.model';
 })
 export class EscolaComponent implements OnInit {
 
-  @Input() escola: Escola
+  @Input() escola:Escola
 
   constructor() { }
 
