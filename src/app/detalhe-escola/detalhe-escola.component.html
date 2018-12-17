@@ -1,8 +1,8 @@
 
 <div class="container">
   <div class="list-group">
-      <div class="card-header" style="background-color:#e0e0eb">
-          {{escola.nome}}
+      <div class="card-header" style="background-color:#e0e0eb;">
+          {{escola?.nome}}
         </div>
     <button type="button" class="list-group-item list-group-item-action">
       <b>ID:</b> {{escola?.codEscola}}
@@ -24,7 +24,7 @@
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
         <div class="card-header" style="background-color:#e0e0eb">
-          Ano {{a.ano}}
+              Ano {{a.ano}}
         </div>
         <li class="list-group-item">Tipo: {{a.tipoAvaliacao.nome}}</li>
         <li class="list-group-item">Média: {{a.valor}}</li>
