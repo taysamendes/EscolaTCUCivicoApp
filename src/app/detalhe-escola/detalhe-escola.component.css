@@ -32,3 +32,6 @@ h3{
     margin-left: 38%;
 }
 
+.list-group-item:hover{
+    background-color: #f2f2f2;
+}
